@@ -24,11 +24,14 @@ from hangarin.views import (
     SubTaskList, SubTaskCreateView, SubTaskUpdateView, SubTaskDeleteView
 )
 from hangarin import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePageView.as_view(), name='home'),
     path("accounts/", include("allauth.urls")), # allauth routes
+    path('', include('pwa.urls')),
+    
     
     # Task URLs
     path('task_list', TaskList.as_view(), name='task-list'),

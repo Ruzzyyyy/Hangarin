@@ -1,4 +1,5 @@
 {% load static %}
+{% load pwa %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
 
-
+    <!-- Custom styles for green-white dashboard -->
+    <style>
+        /* Light green-white background for main content area */
+        #content {
+            background-color: #f0faf5 !important; /* Very light mint green */
+        }
+        
+        /* Alternative: Slightly warmer green-white */
+        body {
+            background-color: #f5fef8 !important; /* Almost white with green tint */
+        }
+        
+        /* Cards with subtle green tint */
+        .card {
+            background-color: #ffffff;
+            border-left: 4px solid #4e9f7b; /* Green accent */
+        }
+        
+        /* Optional: Adjust sidebar to complement */
+        .sidebar {
+            background: linear-gradient(180deg, #2d6a4f 0%, #1b4332 100%) !important;
+        }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(180deg, #2d6a4f 0%, #1b4332 100%) !important;
+        }
+    </style>
+    {% progressive_web_app_meta %}
 </head>
 
 <body id="page-top">
@@ -35,7 +63,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">PSUSphere<sup>tm</sup></div>
+                <div class="sidebar-brand-text mx-3">HANGARIN</div>
             </a>
 
             <!-- Divider -->
@@ -311,7 +339,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Yours Truly</span>
                     </div>
                 </div>
             </footer>
@@ -359,11 +387,11 @@
     <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
     <!-- Page level plugins -->
-    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+    <!-- <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
-    <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+    <!-- <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script> -->
 
 </body>
 

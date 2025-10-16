@@ -31,7 +31,7 @@
                                     <form method="post" action="{% url 'account_login' %}">
                                         {% csrf_token %}
                                         <div class="text-center mb-3">
-                                            <a href="#" class="btn btn-google btn-user btn-block mb-2">
+                                            <a href="{% provider_login_url 'google' %}" class="btn btn-google btn-user btn-block mb-2">
                                                 <i class="fab fa-google fa-fw"></i> Sign in with Google
                                             </a>
                                             <a href="#" class="btn btn-github btn-user btn-block mb-2">

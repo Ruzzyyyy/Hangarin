@@ -93,14 +93,6 @@ class TaskCreateView(CreateView):
     form_class = TaskForm
     template_name = "task_form.html"
     success_url = reverse_lazy("task-list")
-    
-    def form_valid(self, form):
-        print("Form is valid - saving task")
-        return super().form_valid(form)
-    
-    def form_invalid(self, form):
-        print("Form is invalid - errors:", form.errors)
-        return super().form_invalid(form)
 
 #taskupdate
 class TaskUpdateView(UpdateView):
